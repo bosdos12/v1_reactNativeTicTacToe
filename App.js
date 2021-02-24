@@ -24,12 +24,11 @@ export default function App() {
     }
   }
 
-  // this function will check if the game has ended yet
+  // this function will check if the game has ended yet.
   const checkIfWin = () => {
     let curGameState = gameDataArr;
     let TUA = ["X", "O"];
-    setFilledBoxes(filledBoxes + 1); // found that fucking bug OMG!
-    console.log(filledBoxes);
+    setFilledBoxes(filledBoxes + 1); // note: finally found that fucking bug OMG!
     for (let i = 0; i < TUA.length ; i++) {
       // checking if there is a win
       if (
@@ -79,7 +78,6 @@ export default function App() {
   }
   
   const attemptMove = (num1, num2) => {
-    console.log(`${num1} | ${num2}`);
     // checking if the value of the desired array location is empty
     if (gameDataArr[num1][num2] == 0) {
       doMove(num1, num2);
